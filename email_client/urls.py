@@ -31,6 +31,6 @@ urlpatterns = [
     path('sent/<str>', views.email_sent, name="emailSent"),
     path('email/<int:email_id>/archive', views.archive, name="archiveEmail"),
     path('editor/', views.editor, name="editor"),
-    path('api/', include(router.urls)),
+    path('api/', include(router.urls)), # The API urls are generated on launch.
     path('email/<int:email_id>/', views.read, name="readEmail"),
 ]
